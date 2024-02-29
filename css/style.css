@@ -1,0 +1,254 @@
+﻿@charset "utf-8";
+
+body {
+	font-family: "Roboto", "Noto Sans KR", sans-serif;
+}
+
+header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-width: 1440px;
+	display: flex;
+	justify-content: space-between;
+	z-index: 10;
+}
+
+
+
+header .logo {
+	padding: 30px 0 0 30px;
+	text-indent: -100px;
+	overflow: hidden;
+	width: 161px;
+	height: 18px;
+	background: url(../images/logo.png) no-repeat center;
+}
+
+header span {
+	color: #fff;
+}
+
+header .right {
+	display: flex;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+	justify-content: flex-end;
+	align-items: center;
+
+}
+
+header .right_1 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: calc(1440px / 3);
+}
+
+header .utils ul {
+	display: flex;
+}
+
+header .utils ul li a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 80px;
+	padding: 0 10px;
+	font-size: 14px;
+}
+
+
+header .utils ul li a img {
+	width: 26px;
+	height: 26px;
+}
+
+header .right .tel {
+	padding-left: 28px;
+	letter-spacing: 0.2em;
+	word-spacing: 1.2em;
+	position: relative;
+
+}
+
+header .right .tel::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	transform: translateY(-50%);
+	width: 3px;
+	height: 3px;
+	background-color: #fff;
+}
+
+header .right .tel::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 30%;
+	transform: translateY(-50%);
+	width: 3px;
+	height: 3px;
+	background-color: #fff;
+}
+
+header .menu {
+	display: block;
+	position: relative;
+	background-color: #fff;
+	color: black;
+	width: 240px;
+	font-size: 16px;
+	line-height: 80px;
+	padding-left: 60px;
+	box-sizing: border-box;
+	font-weight: 500;
+} 
+
+
+header .menu::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 29px;
+	width: 20px;
+	height: 20px;
+	background: url(../images/icon_tab.png);
+} 
+
+section {
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.2);
+	min-width: 1440px;
+}
+
+section .bg img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	min-width: 1440px;
+}
+
+section .inner {
+	width: calc(100% - (240px * 2));
+	margin: 0 auto;
+	position: relative;
+}
+
+section .inner::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1px;
+	height: 100vh;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+section .inner::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1px;
+	height: 100vh;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+section .inner .content {
+	padding-top: 40vh;
+}
+
+section .inner .content p {
+	margin-top: 55px;
+	font-size: 26px;
+	color: #fff;
+	font-weight: 200;
+}
+
+section .inner .logo {
+	width: 350px;
+}
+
+section .inner .link {
+	position: relative;
+	margin-top: 35px;
+	display: inline-block;
+	border-top: solid 1px #fff;
+	border-bottom: solid 1px #fff;
+	padding-right: 150px;
+	line-height: 65px;
+	letter-spacing: 1.5em;
+	font-size: 14px;
+	color: #fff;
+	transition: 1s;
+}
+
+section .inner .link::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 17px;
+	height: 15px;
+	background: url(../images/icon_arrow.png) no-repeat center;
+	background-size: contain;
+	transition: 1s;
+}
+
+section .inner .link:hover {
+	background-color: #000;
+	padding: 0 130px 0 20px;
+}
+
+section .inner .link:hover::after {
+	right: 20px;
+}
+
+section .line {
+	width: calc(100vw - 1440px);
+	height: 100vh;
+	position: absolute;
+	right: 50%;
+	transform: translateX(50%);
+	top: 0;
+}
+
+section .line::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1px;
+	height: 100vh;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+section .line::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1px;
+	height: 100vh;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 1440px) {
+	section .line::after {
+		display: none;
+	}
+	section .line {
+		left: 720px;
+
+	}
+}
